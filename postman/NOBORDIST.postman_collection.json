@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "92c2b41f-93bc-4ddc-b388-50377e5a54d2",
+		"name": "NOBORDIST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Vehicles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/vehicles",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"vehicles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vehicles id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/vehicles/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"vehicles",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Vehicle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"brand\": \"Lamborghini\",\n    \"vehicles\": \"Altima\",\n    \"color\": \"Violet\",\n    \"year\": 2018,\n    \"description\": \"[\\\"Third Row Seats\\\", \\\"MP3 (Single Disc)\\\", \\\"Fog Lights\\\", \\\"Power Steering\\\", \\\"AM/FM Stereo\\\", \\\"Airbag: Passenger\\\", \\\"Premium Sound\\\", \\\"CD (Multi Disc)\\\"]\",\n    \"sold\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/vehicles",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"vehicles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vehicles update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"brand\": \"Lamborghini\",\n    \"vehicles\": \"Altima\",\n    \"color\": \"Violet\",\n    \"year\": 2018,\n    \"description\": \"[\\\"Teste de PUT\\\", \\\"MP3 (Single Disc)\\\", \\\"Fog Lights\\\", \\\"Power Steering\\\", \\\"AM/FM Stereo\\\", \\\"Airbag: Passenger\\\", \\\"Premium Sound\\\", \\\"CD (Multi Disc)\\\"]\",\n    \"sold\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/vehicles/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"vehicles",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vehicles Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/vehicles/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"vehicles",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
